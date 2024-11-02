@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+  max-width: var(--max-width);  
+  margin: auto;
+}
+
+header{
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center; 
+  color: var(--extra-light);
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+.headerimg{
+  position: relative;
+  min-height: 500px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(44, 56, 85, 0.9),
+      rgba(100, 125, 187, 0.1)
+    ),
+    url("images/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+
+h1{
+  font-size: 3vw;
+  font-weight: 100;
+  padding-top: 10px;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+nav{
+  height: 40px;
+  font-size: 1rem;
+}
+
+ul{
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    list-style: none;
+    border-spacing: 15px;
+}
+
+li{
+    padding: 0 30px;
+    display: inline;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+h2{
+  text-align: center;
+}
+
+.Home{
+  text-align: center;
+}
+
+.roomtype__grid {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+.roomtype__card {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+  
+.roomtype__content {
+  padding: 1rem;
+}
+  
+.roomtype__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+  
+.roomtype__header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+  
+.roomtype__content p {
+  color: var(--text-light);
+}
+
+.booking_container{
+  margin-top: 30px;
+}
+
+.form .input-box{
+  width: 100%;
+}
+
+.input-box label{
+  color: #333;
+}
+
+.form :where(.input-box input, .select-box){
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.form .column{
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .column input{
+  width: 100%;
+}
+
+.select-box select{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.form button{
+  display: block;
+  margin: auto;
+  height: 55px;
+  width: 40%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  background-color: #037ffc;
+  margin-bottom: 1rem;
+}
+
+.form button:hover{
+  background-color: #0056b3;
+}
+
+.contact{
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f1f1f1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (width < 900px) {
+    .roomtype__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+  
+  @media (width < 600px) {
+    .roomtype__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .form .column{
+      flex-wrap: wrap;
+  }
+  }
